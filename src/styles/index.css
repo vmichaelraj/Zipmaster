@@ -6,6 +6,16 @@
 body {
   padding: 45px;
 }
+
+@keyframes rotation {
+  0% { 
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -76,3 +86,26 @@ nav {
 .compress-button {
   width: 200px;
 }
+#progress-bar {
+  width : 100dvw;
+  height: 100dvh;
+  background-color: rgba(00, 00, 00, 0.5);
+  position: absolute;
+  top : 0;
+  left : 0;
+  display: none;
+  justify-content : center;
+  align-items: center;
+  flex-direction: column;
+  color:white;
+  gap:10px
+}
+.progress {
+  width : 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+  border-left-width: 0px;
+  animation : rotation 2s linear infinite;
+}
+

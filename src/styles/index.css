@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 body {
   padding: 45px;
@@ -26,7 +27,7 @@ nav {
 }
 
 .nav-user-icon-image {
-  background-color: blanchedalmond;
+
   border-radius: 50%;
   width: 56px;
   height: 56px;

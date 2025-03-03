@@ -164,3 +164,8 @@ nav {
 .download-button:hover {
   background-color: darkblue;
 }
+
+.list-container {
+  display: none;
+  padding: 60px 45px 60px;
+}

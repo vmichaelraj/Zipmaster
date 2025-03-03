@@ -1,10 +1,13 @@
 const inputData = document.getElementById("file-input");
 const uploadBox = document.querySelector(".upload-box");
+const listContainer = document.querySelector(".list-container");
 const progressBar = document.getElementById("progress-bar");
 const onFileChange = (event) => {
   if (event.target && event.target?.files?.length > 0) {
     const files = Array.from(event.target.files);
-    uploadBox.innerHTML =
+    uploadBox.style.display = "none";
+    listContainer.style.display = "block";
+    listContainer.innerHTML =
       '<div class="file-list-container"><h2>Selected Files:</h2><ul id="file-list"></ul><button id="confirm-upload" class="confirm-button">Compress</button></div>';
     const fileList = document.getElementById("file-list");
     files.forEach((file) => {
@@ -16,6 +19,8 @@ const onFileChange = (event) => {
       compressFiles(files);
     });
   } else {
+    uploadBox.style.display = "block";
+    listContainer.style.display = "none";
     alert("No files");
   }
 };
